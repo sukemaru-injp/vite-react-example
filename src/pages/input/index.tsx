@@ -19,7 +19,7 @@ const InputPage: React.FC = () => {
 
   const onSubmitForm = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    const res = await postFileApi({ key: 'test' })
+    const res = await postFileApi({ key: 'karin' })
     console.log(res)
   }
 
