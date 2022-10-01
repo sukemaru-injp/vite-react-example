@@ -1,10 +1,5 @@
 import React, { useState } from 'react'
-import styled from 'styled-components'
-
-const Button = styled.button`
-padding: 5px;
-background-color: blueviolet;
-`
+import Button from '../components/Button'
 
 const App: React.FC = () => {
   const [count, setCount] = useState(0)
