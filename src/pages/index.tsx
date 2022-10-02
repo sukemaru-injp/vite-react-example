@@ -1,25 +1,26 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Button from '../components/Button'
+import { useToggle, useCounter } from '../components/hooks'
 
 const App: React.FC = () => {
-  const [count, setCount] = useState(0)
+  const [isCheck, setCheck] = useToggle(false)
+  const { counter, increment, reset } = useCounter(1)
 
   return (
     <div className="App">
-      <div>
-      </div>
-      <h1>Vite + React</h1>
+      <h1>Vite React</h1>
       <div className="card">
-        <Button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+        <Button onClick={increment}>
+          count is {counter}
         </Button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
+        <Button onClick={reset}>
+          reset
+        </Button>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <div>
+        <input type="checkbox" onChange={() => setCheck()}/>
+        <label>{ isCheck ? 'Yes Check' : 'No Check'}</label>
+    </div>
     </div>
   )
 }

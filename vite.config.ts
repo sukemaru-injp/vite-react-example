@@ -5,7 +5,9 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   root: './src',
   build: {
-    outDir: '../dist'
+    target: 'esnext',
+    outDir: '../dist',
+    minify: 'esbuild'
   },
   server: {
     open: true,

@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react'
-import useApi from './useApi'
+import useApiClient from './useApi'
 import InputFile from '../../components/InputFile'
 import Button from '../../components/Button'
 
 const InputPage: React.FC = () => {
   const [file, setFile] = useState<File|null>(null)
 
-  const { postFileApi } = useApi()
+  const { postFileApi } = useApiClient()
 
   useEffect(() => {
     console.log(import.meta.env.MODE, import.meta.env.VITE_FASTIFY_APP_API_PATH)
