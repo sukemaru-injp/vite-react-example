@@ -1,6 +1,7 @@
 import React from 'react'
 import Button from '../components/Button'
 import { useToggle, useCounter } from '../components/hooks'
+import { Link } from 'react-router-dom'
 
 const App: React.FC = () => {
   const [isCheck, setCheck] = useToggle(false)
@@ -20,7 +21,8 @@ const App: React.FC = () => {
       <div>
         <input type="checkbox" onChange={() => setCheck()}/>
         <label>{ isCheck ? 'Yes Check' : 'No Check'}</label>
-    </div>
+      </div>
+      <Link to="/input">input</Link>
     </div>
   )
 }

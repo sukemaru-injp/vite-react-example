@@ -4,6 +4,7 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   root: './src',
+  base: '/app',
   build: {
     target: 'esnext',
     outDir: '../dist',
