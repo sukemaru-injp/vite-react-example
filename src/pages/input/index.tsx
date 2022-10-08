@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react'
-import useApiClient from './useApi'
+import React, { useState } from 'react'
+import useApiClient from './useApiClient'
 import InputFile from '../../components/InputFile'
 import Button from '../../components/Button'
 
