@@ -8,11 +8,6 @@ const InputPage: React.FC = () => {
 
   const { postFileApi } = useApiClient()
 
-  useEffect(() => {
-    console.log(import.meta.env.MODE, import.meta.env.VITE_FASTIFY_APP_API_PATH)
-    console.log(file)
-  }, [file])
-
   const onChangeFile = (event: React.ChangeEvent<HTMLInputElement>) => {
     setFile(event.target?.files?.[0] || null)
   }
@@ -29,7 +24,6 @@ const InputPage: React.FC = () => {
       <form onSubmit={onSubmitForm}>
         <InputFile
           onChangeFile={onChangeFile} />
-
         <Button type='submit'>
           送信!!
         </Button>

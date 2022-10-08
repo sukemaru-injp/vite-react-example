@@ -3,7 +3,7 @@ import type { PostFileApiReq } from './types'
 
 const useApiClient = () => {
   const postFileApi = (req: PostFileApiReq) => {
-    return axios.post('http://localhost:8000/img', req)
+    return axios.post(`${import.meta.env.VITE_FASTIFY_APP_API_PATH}`, req)
   }
   return { postFileApi }
 }
