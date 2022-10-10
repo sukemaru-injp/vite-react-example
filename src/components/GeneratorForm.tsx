@@ -53,13 +53,9 @@ const useGeneratorForm = () => {
 const GeneratorForm = () => {
   const { formState, setText, setKey } = useGeneratorForm()
 
-  useEffect(() => {
-    console.log('state', formState)
-  }, [formState])
-
   return (
     <>
-      <form onSubmit={() => ({})}>
+      <form onSubmit={() => { console.log('state', formState)}}>
         <Input
           type="text"
           placeholder='挿入するテキスト'
