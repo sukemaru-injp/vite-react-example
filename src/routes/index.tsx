@@ -6,7 +6,7 @@ import GenPage from '../pages/gen'
 
 const routes = [
   {
-    path: '/app',
+    path: '/',
     element: <App />,
     children: []
   },

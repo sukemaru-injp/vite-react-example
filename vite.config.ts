@@ -6,7 +6,6 @@ export default defineConfig(({ command, mode }) => {
   process.env = {...process.env, ...loadEnv(mode, process.cwd())};
   return {
     root: './src',
-    base: '/app',
     build: {
       target: 'esnext',
       outDir: '../dist',
