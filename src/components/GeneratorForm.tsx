@@ -1,5 +1,8 @@
 import React, { useReducer, ChangeEvent, useEffect, useCallback } from 'react'
 import Button from './Button'
+import Input from './Input'
+import Select from './Select'
+import { memberList } from '../utils'
 import { match } from 'ts-pattern'
 
 type GeneratorFormState = {
@@ -35,15 +38,20 @@ const useGeneratorForm = () => {
   const setText = useCallback((event: ChangeEvent<HTMLInputElement>) => {
     dispatch({ type: 'SET_TEXT', payload: event.target.value })
   }, [])
+
+  const setKey = useCallback((event: ChangeEvent<HTMLSelectElement>) => {
+    dispatch({type: 'SET_KEY', payload: event.target.value })
+  }, [])
   
   return {
     formState,
     setText,
+    setKey
   }
 }
 
 const GeneratorForm = () => {
-  const { formState, setText } = useGeneratorForm()
+  const { formState, setText, setKey } = useGeneratorForm()
 
   useEffect(() => {
     console.log('state', formState)
@@ -52,10 +60,20 @@ const GeneratorForm = () => {
   return (
     <>
       <form onSubmit={() => ({})}>
-        <input
+        <Input
           type="text"
           placeholder='挿入するテキスト'
           onChange={setText} />
+
+        <Select onChange={setKey}>
+          {memberList.map((member) => {
+            return (
+              <option value={member.key} key={member.key}>
+                {member.label}
+              </option>
+            )
+          })}
+        </Select>
 
         <Button type='submit'>
           送信

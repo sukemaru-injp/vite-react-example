@@ -30,6 +30,5 @@ export const memberList: ReadonlyArray<Member> = [
   { key: 'matsuda_rina', label: '松田 里奈', grade: 2 },
   { key: 'morita_hikaru', label: '森田 ひかる', grade: 2 },
   { key: 'moriya_rena', label: '守屋 麗奈', grade: 2 },
-  { key: 'moriya_rena', label: '守屋 麗奈', grade: 2 },
   { key: 'yamasaki_ten', label: '山﨑 天', grade: 2 }
 ]
