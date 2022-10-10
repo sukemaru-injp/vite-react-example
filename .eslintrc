@@ -22,6 +22,7 @@
         "@typescript-eslint"
     ],
     "rules": {
-        "no-console": ["warn", { "allow": ["warn"] }]
+        "no-console": ["warn", { "allow": ["warn"] }],
+        "quotes": ["error", "single"],
     }
 }
