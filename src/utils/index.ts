@@ -32,3 +32,7 @@ export const memberList: ReadonlyArray<Member> = [
   { key: 'moriya_rena', label: '守屋 麗奈', grade: 2 },
   { key: 'yamasaki_ten', label: '山﨑 天', grade: 2 }
 ]
+
+export const testTestFn = (a: number, b: number) => {
+  return a + b
+}
