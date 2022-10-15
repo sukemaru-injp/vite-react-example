@@ -1,6 +1,6 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
-import GenPage from '.'
+import GenPage from '..'
 
 describe('GenPage Test', () => {
   test('GenPage Render Test', async () => {
